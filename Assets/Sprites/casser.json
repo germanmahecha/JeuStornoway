@@ -1,0 +1,171 @@
+﻿{"frames": {
+
+"Dark-Casser0000":
+{
+	"frame": {"x":0,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0001":
+{
+	"frame": {"x":485,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0002":
+{
+	"frame": {"x":970,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0003":
+{
+	"frame": {"x":1455,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0004":
+{
+	"frame": {"x":1940,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0005":
+{
+	"frame": {"x":2425,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0006":
+{
+	"frame": {"x":2910,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0007":
+{
+	"frame": {"x":3395,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0008":
+{
+	"frame": {"x":0,"y":422,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0009":
+{
+	"frame": {"x":485,"y":422,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0010":
+{
+	"frame": {"x":970,"y":422,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0011":
+{
+	"frame": {"x":1455,"y":422,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0012":
+{
+	"frame": {"x":1940,"y":422,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0013":
+{
+	"frame": {"x":2425,"y":422,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0014":
+{
+	"frame": {"x":2910,"y":422,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0015":
+{
+	"frame": {"x":3395,"y":422,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0016":
+{
+	"frame": {"x":0,"y":844,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0017":
+{
+	"frame": {"x":485,"y":844,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0018":
+{
+	"frame": {"x":970,"y":844,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+},
+"Dark-Casser0019":
+{
+	"frame": {"x":0,"y":0,"w":485,"h":422},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":485,"h":422},
+	"sourceSize": {"w":485,"h":422}
+}},
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "15.0.1.179",
+	"image": "casser.png",
+	"format": "RGBA8888",
+	"size": {"w":4096,"h":4096},
+	"scale": "1"
+}
+}

@@ -1,0 +1,485 @@
+fileFormatVersion: 2
+guid: b8b7c80e35e6c254a97823dbfcae65c2
+timeCreated: 1452867603
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: marche_0
+    21300002: marche_1
+    21300004: marche_2
+    21300006: marche_3
+    21300008: marche_4
+    21300010: marche_5
+    21300012: marche_6
+    21300014: marche_7
+    21300016: marche_8
+    21300018: marche_9
+    21300020: marche_10
+    21300022: marche_11
+    21300024: marche_12
+    21300026: marche_13
+    21300028: marche_14
+    21300030: marche_15
+    21300032: marche_16
+    21300034: marche_17
+    21300036: marche_18
+    21300038: marche_19
+    21300040: marche_20
+    21300042: marche_21
+    21300044: marche_22
+    21300046: marche_23
+    21300048: marche_24
+    21300050: marche_25
+    21300052: marche_26
+    21300054: marche_27
+    21300056: marche_28
+    21300058: marche_29
+    21300060: marche_30
+    21300062: marche_31
+    21300064: marche_32
+    21300066: marche_33
+    21300068: marche_34
+    21300070: marche_35
+    21300072: marche_36
+    21300074: marche_37
+    21300076: marche_38
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: marche_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_2
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_3
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_4
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_5
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_6
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_7
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_8
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_9
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_10
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 3725
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_12
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_13
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_14
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_15
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_16
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_17
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_18
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_19
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_20
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_21
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 3354
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_23
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_24
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_25
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_26
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_27
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_28
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_29
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_30
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_31
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_32
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 2983
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2612
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_34
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2612
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_35
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 2612
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_36
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 2612
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_37
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 2612
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marche_38
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 2612
+        width: 355
+        height: 371
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

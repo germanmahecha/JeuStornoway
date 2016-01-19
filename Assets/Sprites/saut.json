@@ -1,0 +1,179 @@
+﻿{"frames": {
+
+"Dark-Saut0000":
+{
+	"frame": {"x":0,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0001":
+{
+	"frame": {"x":416,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0002":
+{
+	"frame": {"x":832,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0003":
+{
+	"frame": {"x":1248,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0004":
+{
+	"frame": {"x":1664,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0005":
+{
+	"frame": {"x":2080,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0006":
+{
+	"frame": {"x":2496,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0007":
+{
+	"frame": {"x":2912,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0008":
+{
+	"frame": {"x":3328,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0009":
+{
+	"frame": {"x":0,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0010":
+{
+	"frame": {"x":416,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0011":
+{
+	"frame": {"x":832,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0012":
+{
+	"frame": {"x":1248,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0013":
+{
+	"frame": {"x":1664,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0014":
+{
+	"frame": {"x":2080,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0015":
+{
+	"frame": {"x":2496,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0016":
+{
+	"frame": {"x":2912,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0017":
+{
+	"frame": {"x":3328,"y":416,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0018":
+{
+	"frame": {"x":0,"y":832,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0019":
+{
+	"frame": {"x":416,"y":832,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+},
+"Dark-Saut0020":
+{
+	"frame": {"x":0,"y":0,"w":416,"h":416},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":416},
+	"sourceSize": {"w":416,"h":416}
+}},
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "15.0.1.179",
+	"image": "saut.png",
+	"format": "RGBA8888",
+	"size": {"w":4096,"h":4096},
+	"scale": "1"
+}
+}

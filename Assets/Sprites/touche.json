@@ -1,0 +1,131 @@
+﻿{"frames": {
+
+"Dark-Touche0000":
+{
+	"frame": {"x":0,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0001":
+{
+	"frame": {"x":392,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0002":
+{
+	"frame": {"x":784,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0003":
+{
+	"frame": {"x":1176,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0004":
+{
+	"frame": {"x":1568,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0005":
+{
+	"frame": {"x":1960,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0006":
+{
+	"frame": {"x":2352,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0007":
+{
+	"frame": {"x":2744,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0008":
+{
+	"frame": {"x":3136,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0009":
+{
+	"frame": {"x":3528,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0010":
+{
+	"frame": {"x":0,"y":391,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0011":
+{
+	"frame": {"x":392,"y":391,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0012":
+{
+	"frame": {"x":784,"y":391,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0013":
+{
+	"frame": {"x":1176,"y":391,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+},
+"Dark-Touche0014":
+{
+	"frame": {"x":0,"y":0,"w":392,"h":391},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":392,"h":391},
+	"sourceSize": {"w":392,"h":391}
+}},
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "15.0.1.179",
+	"image": "touche.png",
+	"format": "RGBA8888",
+	"size": {"w":4096,"h":4096},
+	"scale": "1"
+}
+}

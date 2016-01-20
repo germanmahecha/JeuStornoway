@@ -12,6 +12,15 @@ public var animateur:Animator;
 var course:float=2.0;
 private var vies:int=1;
 
+// Variable qui contient le script du GameCtrl;
+
+private var gamectrl:GameCtrl;
+
+function Awake (){
+
+	gamectrl = GameObject.FindGameObjectWithTag("GameCtrl").GetComponent(GameCtrl);
+}
+
 
 function Start () 
 {
@@ -23,6 +32,11 @@ function Start ()
 
 function Update ()
 {
+
+	//Pour utiliser les variables qui sont dans le script de GameCtrl il est suffi d'utiliser la syntaxes suivante:
+	//Example on va utiliser la variable nbRubis
+
+		//gamectrl.nbRubis++; Facil dans ce cas on est en train d'affecter la variable nbRubis qui se trouve dans le script du GameCtrl.
 
 	if(Input.GetKeyDown(KeyCode.Space))
 	{

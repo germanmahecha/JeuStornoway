@@ -2,10 +2,10 @@
 
 // Variable qui contient le script du GameCtrl;
 
-private var darkctrl:scDarkController;
+private var gamectrl:GameCtrl;
 function Awake (){
 
-	darkctrl = GameObject.FindGameObjectWithTag("Dark").GetComponent(scDarkController);
+	gamectrl = GameObject.FindGameObjectWithTag("GameCtrl").GetComponent(GameCtrl);
 }
 
 function Start () {
@@ -20,8 +20,7 @@ function OnTriggerEnter2D(other: Collider2D)
 {
 	if(other.gameObject.tag=='Dark')
 	{
-		darkctrl.vies++;
-		//Debug.Log('vie');
+		gamectrl.viesDark++;
 		Destroy(this.gameObject);
 	}
 }

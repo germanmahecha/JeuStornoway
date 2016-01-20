@@ -10,7 +10,7 @@ public var dansLeSol:boolean=false;
 private var marcheDroit:boolean=true;
 public var animateur:Animator;
 var course:float=2.0;
-private var vies:int=1;
+public var vies:int=1;
 
 // Variable qui contient le script du GameCtrl;
 
@@ -101,9 +101,10 @@ function Tourner ()
 	transform.localScale.x *= -1;
 
 }
-
+/*
 function OnTriggerEnter2D(other: Collider2D)
 {
+	
 	vies--;
 		
 	if(vies == 0){
@@ -112,3 +113,5 @@ function OnTriggerEnter2D(other: Collider2D)
 		animateur.SetBool("mort", false);
 	}
 }
+
+*/

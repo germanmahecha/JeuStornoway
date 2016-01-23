@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{EF2B3AC6-0A9F-B01F-B30D-49E6282AB0A0}") = "JeuStornoway", "Assembly-CSharp-firstpass.csproj", "{32786F82-7937-B32A-C86F-50A6E117C98A}"
 EndProject
+Project("{EF2B3AC6-0A9F-B01F-B30D-49E6282AB0A0}") = "JeuStornoway", "Assembly-CSharp.csproj", "{35FF7BA9-2B0F-46A1-C9AE-5338E4728C6F}"
+EndProject
 Project("{EF2B3AC6-0A9F-B01F-B30D-49E6282AB0A0}") = "JeuStornoway", "Assembly-CSharp-Editor.csproj", "{76A561AE-9457-4365-6B2C-CE9006C55414}"
 EndProject
 Project("{EF2B3AC6-0A9F-B01F-B30D-49E6282AB0A0}") = "JeuStornoway", "Assembly-UnityScript.unityproj", "{A9CCD71A-BF1F-F406-61DF-F18763F469D9}"
@@ -17,6 +19,10 @@ Global
 		{32786F82-7937-B32A-C86F-50A6E117C98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32786F82-7937-B32A-C86F-50A6E117C98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32786F82-7937-B32A-C86F-50A6E117C98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35FF7BA9-2B0F-46A1-C9AE-5338E4728C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35FF7BA9-2B0F-46A1-C9AE-5338E4728C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35FF7BA9-2B0F-46A1-C9AE-5338E4728C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35FF7BA9-2B0F-46A1-C9AE-5338E4728C6F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{76A561AE-9457-4365-6B2C-CE9006C55414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{76A561AE-9457-4365-6B2C-CE9006C55414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76A561AE-9457-4365-6B2C-CE9006C55414}.Release|Any CPU.ActiveCfg = Release|Any CPU

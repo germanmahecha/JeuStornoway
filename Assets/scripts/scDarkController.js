@@ -10,10 +10,8 @@ public var dansLeSol:boolean=false;
 private var marcheDroit:boolean=true;
 public var animateur:Animator;
 var course:float=2.0;
-public var vies:int=1;
-
-// Variable qui contient le script du GameCtrl;
-
+public var force:int=10;
+private var doubleSaute:boolean=false;
 private var gamectrl:GameCtrl;
 
 function Awake (){
@@ -30,23 +28,16 @@ function Start ()
 
 }
 
-function Update ()
-{
-
-	//Pour utiliser les variables qui sont dans le script de GameCtrl il est suffi d'utiliser la syntaxes suivante:
-	//Example on va utiliser la variable nbRubis
-
-		//gamectrl.nbRubis++; Facil dans ce cas on est en train d'affecter la variable nbRubis qui se trouve dans le script du GameCtrl.
-
-	if(Input.GetKeyDown(KeyCode.Space))
-	{
-		saut= true;
-	}
-
-}
-
 function FixedUpdate ()
 {
+
+	dansLeSol = Physics2D.OverlapCircle(verifierSol.position, 0.1, sol);
+	if(dansLeSol){
+		doubleSaute=false;
+		animateur.SetBool("dansLeSol",true);
+	}else{
+		animateur.SetBool("dansLeSol",false);
+	}
 
 	var horizontal:float= Input.GetAxis("Horizontal");
 	var courrir=1;
@@ -82,7 +73,7 @@ function FixedUpdate ()
 	if(Physics2D.OverlapCircle(verifierSol.position, 0.1, sol))
 	{
 		dansLeSol=true;
-	}else{
+	}else if(Physics2D.OverlapCircle(verifierSol.position, 0.1, sol)){		
 		dansLeSol=false;
 	}
 
@@ -95,23 +86,92 @@ function FixedUpdate ()
 	}
 }
 
+function Update ()
+{
+
+	if((dansLeSol || !doubleSaute) && Input.GetKeyDown(KeyCode.Space))
+	{
+		GetComponent.<Rigidbody2D>().velocity = new Vector2(GetComponent.<Rigidbody2D>().velocity.x, forceSaut);    	
+    	if(!doubleSaute && !dansLeSol){
+    		doubleSaute=true;
+    	}
+    	animateur.SetBool("saut",true);
+		saut= true;
+	}
+
+	if(!Input.GetKeyDown ("space")){
+
+    	animateur.SetBool("saut",false); 
+    	saut= false;
+    }
+
+    if(gamectrl.viesDark == 0){
+			Debug.Log('Mort');
+			Debug.Log(gamectrl.viesDark);
+			animateur.SetBool("mort", true);
+		}
+
+}
+
 function Tourner ()
  {
 	marcheDroit = !marcheDroit;
 	transform.localScale.x *= -1;
 
 }
-/*
+
 function OnTriggerEnter2D(other: Collider2D)
 {
-	
-	vies--;
-		
-	if(vies == 0){
-		animateur.SetBool("mort", true);
-	}else{
-		animateur.SetBool("mort", false);
+	if(other.gameObject.tag=='Scie')
+	{		
+		animateur.SetBool("toucher", true);
+
+		if(gamectrl.viesDark == 0){
+			
+			animateur.SetBool("mort", true);
+		}
+
+	}
+
+	if(other.gameObject.tag=='Roche')
+	{		
+		animateur.SetBool("toucher", true);
+
+		if(gamectrl.viesDark == 0){
+			
+			animateur.SetBool("mort", true);
+		}
+
+	}
+
+	if(other.gameObject.tag=='stalactite_2d')
+	{		
+		animateur.SetBool("toucher", true);
+
+		if(gamectrl.viesDark == 0){
+			
+			animateur.SetBool("mort", true);
+		}
+
 	}
 }
 
-*/
+function OnTriggerExit2D(other: Collider2D) {
+	if(other.gameObject.tag=='Scie'){
+
+		animateur.SetBool("toucher", false);			
+
+	}
+
+	if(other.gameObject.tag=='stalactite_2d')
+	{		
+		animateur.SetBool("toucher", false);
+
+	}
+
+	if(other.gameObject.tag=='Roche')
+	{		
+		animateur.SetBool("toucher", false);
+
+	}
+}

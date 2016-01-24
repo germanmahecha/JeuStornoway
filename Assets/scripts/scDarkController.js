@@ -25,7 +25,6 @@ function Start ()
 
 	rigidBody2D=GetComponent.<Rigidbody2D>();
 	animateur=GetComponent.<Animator>();
-
 }
 
 function FixedUpdate ()
@@ -84,6 +83,12 @@ function FixedUpdate ()
 		rigidBody2D.AddForce(new Vector2(0, forceSaut));
 		saut= false;
 	}
+
+	if(gamectrl.viesDark == 0){
+			
+		animateur.SetBool("mort", true);
+		Debug.Log("Mort");
+	}
 }
 
 function Update ()
@@ -105,12 +110,6 @@ function Update ()
     	saut= false;
     }
 
-    if(gamectrl.viesDark == 0){
-			Debug.Log('Mort');
-			Debug.Log(gamectrl.viesDark);
-			animateur.SetBool("mort", true);
-		}
-
 }
 
 function Tourner ()
@@ -125,22 +124,13 @@ function OnTriggerEnter2D(other: Collider2D)
 	if(other.gameObject.tag=='Scie')
 	{		
 		animateur.SetBool("toucher", true);
-
-		if(gamectrl.viesDark == 0){
-			
-			animateur.SetBool("mort", true);
-		}
-
+		yield WaitForSeconds(0.09);
+		transform.position.x-= 1;
 	}
 
 	if(other.gameObject.tag=='Roche')
 	{		
 		animateur.SetBool("toucher", true);
-
-		if(gamectrl.viesDark == 0){
-			
-			animateur.SetBool("mort", true);
-		}
 
 	}
 
@@ -148,18 +138,13 @@ function OnTriggerEnter2D(other: Collider2D)
 	{		
 		animateur.SetBool("toucher", true);
 
-		if(gamectrl.viesDark == 0){
-			
-			animateur.SetBool("mort", true);
-		}
-
 	}
 }
 
 function OnTriggerExit2D(other: Collider2D) {
 	if(other.gameObject.tag=='Scie'){
 
-		animateur.SetBool("toucher", false);			
+		animateur.SetBool("toucher", false);
 
 	}
 

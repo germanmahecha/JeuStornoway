@@ -1,0 +1,51 @@
+« VERSION ALPHA » 
+JEU STORNOWAY
+==================
+
+« touches de contrôles» 
+
+avancer gauche 	= 	flèche gauche
+avancer droite 	= 	flèche droite
+sauter 		=	Barre d'espacement
+courir		= 	Ctrl
+action casser	=	Alt 
+
+Commentaires: 	
+
+> 	Les animations fonctionnent mais il reste
+	quelques ajustements avec les objets interactifs.
+----------------------------------------------
+
+« Développement » 
+
+>	Dans le menu principal: 
+	les éléments graphiques sont inclus, La navigation de basse
+	fonctionne mais il reste ajouter quelque fonctionnalités
+	sur l'interface. 
+	Menu accueil: fini
+	Menu instructions: Presque fini
+	Menu Niveaux: Presque fini
+	Menu Options: seulement la scène, le titre et bouton retourner.
+
+-	Décoration de base fini, décoration et effets sur le terrain à faire.
+-	Placement des éléments à ramasser de base
+-	Obstacles de base 
+
+>	Le terrain du niveau 1 est fini à 80%. Le 20% restant est à la fin.
+>	Le système de pointage n'est pas fini
+
+Commentaires:
+	
+
+----------------------------------------------
+
+« Bogues »
+
+Commentaires: 
+1.	Bogue sur le message qu’indique au personnage que doit activer un levier pour ouvrir le ascenseur.
+2.	Quelques plateformes ne sont pas bien places à cause de petits ajustement dans la mécanique du personnage (saut).
+3.	Il faut ajouter l’animation de mort dans l’animator controller.
+4.	Il faut corriger la application de la force sur le personnage lorsqu’il rende en trigger avec les scies.
+5.	Lorsque le personnage applique la vitesse sur un mur, il ne descend pas.
+6.	Il faut détruire les stalactites lorsqu’elles sort de la scène du jeu. 
+ 

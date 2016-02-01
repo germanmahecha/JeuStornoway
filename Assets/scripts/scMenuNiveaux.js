@@ -4,7 +4,7 @@
 
 
 function niveau0() {
-    Application.LoadLevel("tuto");
+    Application.LoadLevel("niveauTuto");
 
 }
 

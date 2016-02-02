@@ -4,6 +4,8 @@ public var animateur:Animator;
 public var dark:GameObject;
 public var ascenseur_ferme_droite:GameObject;
 public var ascenseur_ferme_gauche:GameObject;
+public var son_ascenseur:AudioSource;
+var volume:float;
 
 
 
@@ -32,8 +34,8 @@ function OnTriggerEnter2D(other: Collider2D	){
 	if(other.gameObject.tag == 'Dark')
 	{
 	Debug.Log("Entre");
+		son_ascenseur.Play();
 		animateur.SetBool("Enter", true);
-		//animateur.SetBool("sort", true);
 		dark.transform.parent = this.transform;
 		ascenseur_ferme_droite.SetActive (true);
 		ascenseur_ferme_gauche.SetActive (true);
@@ -45,11 +47,7 @@ function OnTriggerEnter2D(other: Collider2D	){
 function OnTriggerExit2D(other: Collider2D	){
 	if(other.gameObject.tag == 'Dark')
 	{
-	//Debug.Log("Entre");
-		//animateur.SetBool("Enter", true);
-		//animateur.SetBool("sort", true);
 		dark.transform.parent = null;
-
 
 	}
 

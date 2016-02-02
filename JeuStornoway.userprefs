@@ -1,16 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/ScControlleAscenseur.js">
-    <Files>
-      <File FileName="Assets/scripts/ScControlleAscenseur.js" Line="33" Column="2" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="JeuStornoway" expanded="True">
             <Node name="Assembly-UnityScript" expanded="True">
               <Node name="scripts" expanded="True">
-                <Node name="ScControlleAscenseur.js" selected="True" />
+                <Node name="ScDiamant.js" selected="True" />
               </Node>
             </Node>
           </Node>

@@ -12,6 +12,10 @@ public var animateur:Animator;
 var course:float=2.0;
 public var force:int=10;
 private var doubleSaute:boolean=false;
+public var diamant_son:AudioSource;
+public var ouch:AudioSource;
+public var rubis_son:AudioSource;
+
 private var gamectrl:GameCtrl;
 
 function Awake (){
@@ -135,8 +139,23 @@ function OnTriggerEnter2D(other: Collider2D)
 	}
 
 	if(other.gameObject.tag=='stalactite_2d')
-	{		
+	{	
+		//son quand la stalactite touch le perso
+		ouch.Play();	
 		animateur.SetBool("toucher", true);
+
+	}
+
+	//son diamant
+		if(other.gameObject.tag=='Diamant')
+	{		
+		diamant_son.Play();
+
+	}
+
+		if(other.gameObject.tag=='Rubis')
+	{		
+		rubis_son.Play();
 
 	}
 }

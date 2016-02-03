@@ -9,6 +9,7 @@ public var dynamite:boolean=false;
 public var diamants: UnityEngine.UI.Text;
 public var rubis: UnityEngine.UI.Text;
 public var vies: UnityEngine.UI.Text;
+public var vieRoche:int=3;
 
 function Start () {
 

@@ -15,6 +15,16 @@ private var doubleSaute:boolean=false;
 public var diamant_son:AudioSource;
 public var ouch:AudioSource;
 public var rubis_son:AudioSource;
+public var tutoSaut : GameObject;
+public var tutoRamasser : GameObject;
+public var tutoVies : GameObject;
+public var tutoSautPlatt : GameObject;
+public var tutoScie : GameObject;
+public var tutoStalactite : GameObject;
+public var tutoPiquer : GameObject;
+public var tutoDinamite : GameObject;
+public var tutoOk : GameObject;
+
 
 private var gamectrl:GameCtrl;
 
@@ -45,7 +55,7 @@ function FixedUpdate ()
 	var horizontal:float= Input.GetAxis("Horizontal");
 	var courrir=1;
 
-	if(Input.GetKey(KeyCode.LeftControl))
+	if(Input.GetKey("z"))
 	{
 		courrir=course;	
 		animateur.SetBool("course", true);
@@ -53,7 +63,7 @@ function FixedUpdate ()
 		animateur.SetBool("course", false);
 	}
 
-	if(Input.GetKey(KeyCode.LeftAlt))
+	if(Input.GetKey("x"))
 	{			
 		animateur.SetBool("casser", true);
 	}else{
@@ -114,6 +124,21 @@ function Update ()
     	saut= false;
     }
 
+    if(Input.GetKey(KeyCode.Return)){
+
+    	Time.timeScale = 1;
+		tutoSaut.SetActive(false);
+		tutoRamasser.SetActive(false);
+		tutoVies.SetActive(false);
+		tutoSautPlatt.SetActive(false);
+		tutoScie.SetActive(false);
+		tutoStalactite.SetActive(false);
+		tutoPiquer.SetActive(false);
+		tutoDinamite.SetActive(false);
+		tutoOk.SetActive(false);
+    }
+
+
 }
 
 function Tourner ()
@@ -122,6 +147,17 @@ function Tourner ()
 	transform.localScale.x *= -1;
 
 }
+
+tutoSaut.SetActive(false);
+tutoRamasser.SetActive(false);
+tutoVies.SetActive(false);
+tutoSautPlatt.SetActive(false);
+tutoScie.SetActive(false);
+tutoStalactite.SetActive(false);
+tutoPiquer.SetActive(false);
+tutoDinamite.SetActive(false);
+tutoOk.SetActive(false);
+
 
 function OnTriggerEnter2D(other: Collider2D)
 {
@@ -158,6 +194,88 @@ function OnTriggerEnter2D(other: Collider2D)
 		rubis_son.Play();
 
 	}
+
+	if(other.gameObject.tag == "ActionMessageSaut")
+	{		
+		
+		tutoSaut.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "ActionMessagePierresRamasser")
+	{		
+		
+		tutoRamasser.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "ActionMessageCoffre")
+	{		
+		
+		tutoVies.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "ActionMessagePlateforMov")
+	{		
+		
+		tutoSautPlatt.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "ActionMessageScies")
+	{		
+		
+		tutoScie.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "ActionMessageStalactites")
+	{		
+		
+		tutoStalactite.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "ActionMessageRoches")
+	{		
+		
+		tutoPiquer.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "ActionMessageDinamite")
+	{		
+		
+		tutoDinamite.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "ActionMessageBloque")
+	{		
+		
+		tutoOk.SetActive(true);
+		Time.timeScale = 0; 		
+ 		 		 			
+	}
+
+	if(other.gameObject.tag == "FinTuto")
+	{		
+		
+		Application.LoadLevel(4);
+		Time.timeScale = 1;
+	
+ 		 		 			
+	}
+
 }
 
 function OnTriggerExit2D(other: Collider2D) {

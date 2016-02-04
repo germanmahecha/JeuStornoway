@@ -33,7 +33,6 @@ ascenseur_ferme_gauche.SetActive (false);
 function OnTriggerEnter2D(other: Collider2D	){
 	if(other.gameObject.tag == 'Dark')
 	{
-	Debug.Log("Entre");
 		son_ascenseur.Play();
 		animateur.SetBool("Enter", true);
 		dark.transform.parent = this.transform;

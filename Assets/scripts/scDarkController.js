@@ -36,7 +36,7 @@ function Awake (){
 
 function Start () 
 {
-
+	
 	rigidBody2D=GetComponent.<Rigidbody2D>();
 	animateur=GetComponent.<Animator>();
 }
@@ -55,16 +55,14 @@ function FixedUpdate ()
 	var horizontal:float= Input.GetAxis("Horizontal");
 	var courrir=1;
 
-	if(Input.GetKey("z"))
-	{
+	if(Input.GetKey("z")){
 		courrir=course;	
 		animateur.SetBool("course", true);
 	}else{
 		animateur.SetBool("course", false);
 	}
 
-	if(Input.GetKey("x"))
-	{			
+	if(Input.GetKey("x")){			
 		animateur.SetBool("casser", true);
 	}else{
 		animateur.SetBool("casser", false);
@@ -74,17 +72,14 @@ function FixedUpdate ()
 
 	animateur.SetFloat("vitessePerso", Mathf.Abs(horizontal));
 
-	if(marcheDroit && horizontal < 0 )
-	{
+	if(marcheDroit && horizontal < 0 ){
 		Tourner();
 	}
-	else if(!marcheDroit && horizontal > 0)
-	{
+	else if(!marcheDroit && horizontal > 0){
 		Tourner();
 	}
 
-	if(Physics2D.OverlapCircle(verifierSol.position, 0.1, sol))
-	{
+	if(Physics2D.OverlapCircle(verifierSol.position, 0.1, sol)){
 		dansLeSol=true;
 	}else if(Physics2D.OverlapCircle(verifierSol.position, 0.1, sol)){		
 		dansLeSol=false;
@@ -92,16 +87,15 @@ function FixedUpdate ()
 
 	animateur.SetBool("saut", !dansLeSol);
 
-	if(saut && dansLeSol)
-	{
+	if(saut && dansLeSol){
 		rigidBody2D.AddForce(new Vector2(0, forceSaut));
 		saut= false;
 	}
-
-	if(gamectrl.viesDark == 0){
-			
+	//Si Dark perds toutes les vies, il retourne au menu des niveaux
+	if(gamectrl.viesDark == 0){		
 		animateur.SetBool("mort", true);
-		Debug.Log("Mort");
+		Application.LoadLevel(2);
+		Time.timeScale = 1;
 	}
 }
 
@@ -119,14 +113,12 @@ function Update ()
 	}
 
 	if(!Input.GetKeyDown ("space")){
-
-    	animateur.SetBool("saut",false); 
+	   	animateur.SetBool("saut",false); 
     	saut= false;
     }
 
     if(Input.GetKey(KeyCode.Return)){
-
-    	Time.timeScale = 1;
+       	Time.timeScale = 1;
 		tutoSaut.SetActive(false);
 		tutoRamasser.SetActive(false);
 		tutoVies.SetActive(false);
@@ -141,159 +133,143 @@ function Update ()
 
 }
 
-function Tourner ()
- {
+function Tourner (){
 	marcheDroit = !marcheDroit;
 	transform.localScale.x *= -1;
-
 }
-
-tutoSaut.SetActive(false);
-tutoRamasser.SetActive(false);
-tutoVies.SetActive(false);
-tutoSautPlatt.SetActive(false);
-tutoScie.SetActive(false);
-tutoStalactite.SetActive(false);
-tutoPiquer.SetActive(false);
-tutoDinamite.SetActive(false);
-tutoOk.SetActive(false);
 
 
 function OnTriggerEnter2D(other: Collider2D)
 {
-	if(other.gameObject.tag=='Scie')
-	{		
+	if(other.gameObject.tag=='Scie')	{		
 		animateur.SetBool("toucher", true);
 		yield WaitForSeconds(0.09);
 		transform.position.x-= 1;
 	}
 
-	if(other.gameObject.tag=='Roche')
-	{		
+	if(other.gameObject.tag=='Roche'){		
 		animateur.SetBool("toucher", true);
-
 	}
 
-	if(other.gameObject.tag=='stalactite_2d')
-	{	
+	if(other.gameObject.tag=='returnPosition'){		
+		gamectrl.viesDark--;
+	}
+
+	if(other.gameObject.tag=='stalactite_2d'){	
 		//son quand la stalactite touch le perso
 		ouch.Play();	
 		animateur.SetBool("toucher", true);
-
 	}
 
 	//son diamant
-		if(other.gameObject.tag=='Diamant')
-	{		
+	if(other.gameObject.tag=='Diamant')	{		
 		diamant_son.Play();
-
 	}
 
-		if(other.gameObject.tag=='Rubis')
-	{		
+	if(other.gameObject.tag=='Rubis')	{		
 		rubis_son.Play();
-
 	}
 
-	if(other.gameObject.tag == "ActionMessageSaut")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessageSaut")	{		
 		tutoSaut.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 				 			
 	}
 
-	if(other.gameObject.tag == "ActionMessagePierresRamasser")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessagePierresRamasser"){		
 		tutoRamasser.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 		 		 			
 	}
 
-	if(other.gameObject.tag == "ActionMessageCoffre")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessageCoffre"){		
 		tutoVies.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 				 			
 	}
 
-	if(other.gameObject.tag == "ActionMessagePlateforMov")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessagePlateforMov"){	
 		tutoSautPlatt.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 			 		 			
 	}
 
-	if(other.gameObject.tag == "ActionMessageScies")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessageScies"){		
 		tutoScie.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 				 			
 	}
 
-	if(other.gameObject.tag == "ActionMessageStalactites")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessageStalactites"){		
 		tutoStalactite.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 		 		 			
 	}
 
-	if(other.gameObject.tag == "ActionMessageRoches")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessageRoches"){		
 		tutoPiquer.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 		 		 			
 	}
 
-	if(other.gameObject.tag == "ActionMessageDinamite")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessageDinamite"){		
 		tutoDinamite.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 		 		 			
 	}
 
-	if(other.gameObject.tag == "ActionMessageBloque")
-	{		
-		
+	if(other.gameObject.tag == "ActionMessageBloque"){		
 		tutoOk.SetActive(true);
-		Time.timeScale = 0; 		
- 		 		 			
+		Time.timeScale = 0; 		 		 			
 	}
 
-	if(other.gameObject.tag == "FinTuto")
-	{		
-		
-		Application.LoadLevel(4);
-		Time.timeScale = 1;
-	
- 		 		 			
+	if(other.gameObject.tag == "FinTuto"){		
+		Application.LoadLevel(2);
+		Time.timeScale = 1;	 		 			
 	}
 
+	//Enregistrer la position de dark
+	if(other.gameObject.tag == "enregistrerPosition"){		
+		//Enregistre les positions de Dark dans le niveau tutoriel
+		if(gamectrl.niveauActive==4){
+			PlayerPrefs.SetFloat('positionxNT',transform.position.x);
+			PlayerPrefs.SetFloat('positionyNT',transform.position.y);
+		} 
+		//Enregistre les positions de Dark dans le niveau 1
+		if(gamectrl.niveauActive==5){
+			PlayerPrefs.SetFloat('positionxN1',transform.position.x);
+			PlayerPrefs.SetFloat('positionyN1',transform.position.y);
+		}
+		//Enregistre les positions de Dark dans le niveau 2
+		if(gamectrl.niveauActive==6){
+			PlayerPrefs.SetFloat('positionxN2',transform.position.x);
+			PlayerPrefs.SetFloat('positionyN2',transform.position.y);
+		}	 		 			
+	}
+
+
+	//Return Dark à une position anterieur
+	if(other.gameObject.tag == "returnPosition"){		
+		//Return Dark à une position anterieur dans le niveau tutoriel
+		if(gamectrl.niveauActive==4){
+			transform.position.x=PlayerPrefs.GetFloat('positionxNT');
+			transform.position.y=PlayerPrefs.GetFloat('positionyNT');
+		}
+		//Return Dark à une position anterieur dans le niveau 1
+		if(gamectrl.niveauActive==5){
+			transform.position.x=PlayerPrefs.GetFloat('positionxN1');
+			transform.position.y=PlayerPrefs.GetFloat('positionyN1');
+		}
+		//Return Dark à une position anterieur dans le niveau 2
+		if(gamectrl.niveauActive==6){
+			transform.position.x=PlayerPrefs.GetFloat('positionxN2');
+			transform.position.y=PlayerPrefs.GetFloat('positionyN2');
+		}	 		 			
+	}
 }
 
 function OnTriggerExit2D(other: Collider2D) {
 	if(other.gameObject.tag=='Scie'){
-
 		animateur.SetBool("toucher", false);
-
 	}
 
-	if(other.gameObject.tag=='stalactite_2d')
-	{		
+	if(other.gameObject.tag=='stalactite_2d'){		
 		animateur.SetBool("toucher", false);
-
 	}
 
-	if(other.gameObject.tag=='Roche')
-	{		
+	if(other.gameObject.tag=='Roche')	{		
 		animateur.SetBool("toucher", false);
-
 	}
 }

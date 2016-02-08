@@ -2,8 +2,8 @@
 
 public var nbDiamants:int= 0;
 public var nbRubis:int= 0;
-public var nbMaxDiamants:int= 68;
-public var nbMaxRubis:int= 22;
+public var nbMaxDiamants:int;
+public var nbMaxRubis:int;
 public var viesDark:int=5;
 public var dynamite:boolean=false;
 public var dynamiteImage:UnityEngine.UI.Image;
@@ -22,6 +22,9 @@ function Awake(){
 function Start () {
 	dynamite=false;
 	dynamiteImage.fillAmount=0;
+
+	nbMaxDiamants = GameObject.FindGameObjectsWithTag("Diamant").length;
+	nbMaxRubis = GameObject.FindGameObjectsWithTag("Rubis").length;
 }
 
 function Update () {

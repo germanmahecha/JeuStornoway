@@ -21,6 +21,7 @@ function OnTriggerEnter2D(other: Collider2D)
 	if(other.gameObject.tag=='Dark')
 	{
 		gamectrl.nbRubis++;
+		gamectrl.nbMaxRubis--;
 		//Debug.Log('Rubis');
 		Destroy(this.gameObject);
 	}

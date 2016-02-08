@@ -24,6 +24,7 @@ function OnTriggerEnter2D(other: Collider2D)
 	{
 		
 		gamectrl.nbDiamants++;
+		gamectrl.nbMaxDiamants--;
 		//Debug.Log('Diamant');
 		Destroy(this.gameObject);
 	}

@@ -22,7 +22,7 @@ function Update () {
 
 function OnCollisionEnter2D(other:  Collision2D){
 
-	if(other.gameObject.tag == "Dark")
+	if(other.gameObject.tag == "pique")
 	{				
 		gamectrl.vieRoche--; 
 

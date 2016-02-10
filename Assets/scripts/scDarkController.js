@@ -99,6 +99,16 @@ function FixedUpdate ()
 	}
 }
 
+tutoSaut.SetActive(false);
+tutoRamasser.SetActive(false);
+tutoVies.SetActive(false);
+tutoSautPlatt.SetActive(false);
+tutoScie.SetActive(false);
+tutoStalactite.SetActive(false);
+tutoPiquer.SetActive(false);
+tutoDinamite.SetActive(false);
+tutoOk.SetActive(false);
+
 function Update ()
 {
 

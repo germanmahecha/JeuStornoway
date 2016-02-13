@@ -8,33 +8,25 @@ http://www.freesfx.co.uk/rx2/mp3s/2/2690_1329133083.mp3
 */
 private var son:AudioSource;
 
-function Start()
-{
+function Start(){
    son=GetComponent.<AudioSource>();
-
 }
 
-function Awake()
-{
+function Awake(){
     DontDestroyOnLoad (transform.gameObject);
-
 }
-
-function StartJouer() 
-{
+//Function pour activer l'escène Menu Niveaux
+function StartJouer(){
     son.Play();
     Application.LoadLevel("MenuNiveaux");
 }
-
-function niveau0() 
-{
+//Function pour activer l'escène Niveau Tutoriel
+function niveau0(){
 	son.Play();
 	Application.LoadLevel("niveauTuto");
 }
-
-function Menu()
-{
+//Function pour activer l'escène Menu Accueil
+function Menu(){
     son.Play();
     Application.LoadLevel("Menu");
-
 }

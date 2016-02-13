@@ -6,48 +6,26 @@ public var non_message:GameObject;
 public var son_levier:AudioSource;
 var volume:float;
 
-
-
-function Start () {
-
-
-
-}
-
-function Update () {
-
-}
-
-
 porte_droite.SetActive (true);
 porte_gauche.SetActive (true);
-
 
 function OnTriggerEnter2D(other: Collider2D	){
 	if(other.gameObject.tag == 'Dark')
 	{
-	//Debug.Log("Entre");
-	son_levier.Play();
-	Destroy(porte_barre);
-	porte_droite.SetActive (false);
-	porte_gauche.SetActive (false);
-	non_message.SetActive (false);
-
-
-
-
+		son_levier.Play();
+		Destroy(porte_barre);
+		porte_droite.SetActive (false);
+		porte_gauche.SetActive (false);
+		non_message.SetActive (false);
 	}
 }
-
+//Function Trigger qui detecte une collision avec le personnage
+//pour activer le son du levier
 function OnTriggerExit2D(other: Collider2D	){
-	if(other.gameObject.tag == 'Dark')
-	{
-
-	son_levier.volume=0;
-
+	if(other.gameObject.tag == 'Dark'){
+		son_levier.volume=0;
 	}
-
-	}
+}
 
 
 

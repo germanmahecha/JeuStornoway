@@ -7,16 +7,12 @@ http://www.freesfx.co.uk/rx2/mp3s/2/2690_1329133083.mp3
 */
 private var son:AudioSource;
 
-function Start()
-{
-
+function Start(){
    son=GetComponent.<AudioSource>();
-
 }
 
-function Menu()
-{
+//Function pour activer l'escène Menu Accueil
+function Menu(){
    son.Play();
    Application.LoadLevel("Menu");
-
 }

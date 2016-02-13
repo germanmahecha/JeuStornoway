@@ -9,41 +9,28 @@ public var sol:LayerMask;
 public var dansLeSol:boolean=false;
 private var marcheDroit:boolean=true;
 public var animateur:Animator;
-var course:float=2.0;
+var course:float=2;
 public var force:int=10;
 private var doubleSaute:boolean=false;
 public var diamant_son:AudioSource;
 public var ouch:AudioSource;
 public var rubis_son:AudioSource;
-public var tutoSaut : GameObject;
-public var tutoRamasser : GameObject;
-public var tutoVies : GameObject;
-public var tutoSautPlatt : GameObject;
-public var tutoScie : GameObject;
-public var tutoStalactite : GameObject;
-public var tutoPiquer : GameObject;
-public var tutoDinamite : GameObject;
-public var tutoOk : GameObject;
-
+public var sonViesDark:AudioSource;
+public var sonSautDark:AudioSource;
 
 private var gamectrl:GameCtrl;
 
 function Awake (){
-
 	gamectrl = GameObject.FindGameObjectWithTag("GameCtrl").GetComponent(GameCtrl);
 }
 
 
-function Start () 
-{
-	
+function Start () {
 	rigidBody2D=GetComponent.<Rigidbody2D>();
 	animateur=GetComponent.<Animator>();
 }
 
-function FixedUpdate ()
-{
-
+function FixedUpdate (){
 	dansLeSol = Physics2D.OverlapCircle(verifierSol.position, 0.1, sol);
 	if(dansLeSol){
 		doubleSaute=false;
@@ -94,20 +81,9 @@ function FixedUpdate ()
 	//Si Dark perds toutes les vies, il retourne au menu des niveaux
 	if(gamectrl.viesDark == 0){		
 		animateur.SetBool("mort", true);
-		Application.LoadLevel(2);
-		Time.timeScale = 1;
 	}
 }
 
-tutoSaut.SetActive(false);
-tutoRamasser.SetActive(false);
-tutoVies.SetActive(false);
-tutoSautPlatt.SetActive(false);
-tutoScie.SetActive(false);
-tutoStalactite.SetActive(false);
-tutoPiquer.SetActive(false);
-tutoDinamite.SetActive(false);
-tutoOk.SetActive(false);
 
 function Update ()
 {
@@ -117,30 +93,17 @@ function Update ()
 		GetComponent.<Rigidbody2D>().velocity = new Vector2(GetComponent.<Rigidbody2D>().velocity.x, forceSaut);    	
     	if(!doubleSaute && !dansLeSol){
     		doubleSaute=true;
+    		sonSautDark.Play();
     	}
     	animateur.SetBool("saut",true);
 		saut= true;
+		sonSautDark.Play();
 	}
 
 	if(!Input.GetKeyDown ("space")){
 	   	animateur.SetBool("saut",false); 
     	saut= false;
     }
-
-    if(Input.GetKey(KeyCode.Return)){
-       	Time.timeScale = 1;
-		tutoSaut.SetActive(false);
-		tutoRamasser.SetActive(false);
-		tutoVies.SetActive(false);
-		tutoSautPlatt.SetActive(false);
-		tutoScie.SetActive(false);
-		tutoStalactite.SetActive(false);
-		tutoPiquer.SetActive(false);
-		tutoDinamite.SetActive(false);
-		tutoOk.SetActive(false);
-    }
-
-
 }
 
 function Tourner (){
@@ -172,62 +135,24 @@ function OnTriggerEnter2D(other: Collider2D)
 	}
 
 	//son diamant
-	if(other.gameObject.tag=='Diamant')	{		
+	if(other.gameObject.tag=='Diamant'){		
 		diamant_son.Play();
 	}
 
-	if(other.gameObject.tag=='Rubis')	{		
+	if(other.gameObject.tag=='Rubis'){		
 		rubis_son.Play();
 	}
-
-	if(other.gameObject.tag == "ActionMessageSaut")	{		
-		tutoSaut.SetActive(true);
-		Time.timeScale = 0; 				 			
+	if(other.gameObject.tag=='Casque'){
+		sonViesDark.Play();
 	}
 
-	if(other.gameObject.tag == "ActionMessagePierresRamasser"){		
-		tutoRamasser.SetActive(true);
-		Time.timeScale = 0; 		 		 			
-	}
-
-	if(other.gameObject.tag == "ActionMessageCoffre"){		
-		tutoVies.SetActive(true);
-		Time.timeScale = 0; 				 			
-	}
-
-	if(other.gameObject.tag == "ActionMessagePlateforMov"){	
-		tutoSautPlatt.SetActive(true);
-		Time.timeScale = 0; 			 		 			
-	}
-
-	if(other.gameObject.tag == "ActionMessageScies"){		
-		tutoScie.SetActive(true);
-		Time.timeScale = 0; 				 			
-	}
-
-	if(other.gameObject.tag == "ActionMessageStalactites"){		
-		tutoStalactite.SetActive(true);
-		Time.timeScale = 0; 		 		 			
-	}
-
-	if(other.gameObject.tag == "ActionMessageRoches"){		
-		tutoPiquer.SetActive(true);
-		Time.timeScale = 0; 		 		 			
-	}
-
-	if(other.gameObject.tag == "ActionMessageDinamite"){		
-		tutoDinamite.SetActive(true);
-		Time.timeScale = 0; 		 		 			
-	}
-
-	if(other.gameObject.tag == "ActionMessageBloque"){		
-		tutoOk.SetActive(true);
-		Time.timeScale = 0; 		 		 			
-	}
+	/*if(other.gameObject.tag == "FinTuto"){		
+		gamectrl.gagnant=true;			
+	}*/
 
 	if(other.gameObject.tag == "FinTuto"){		
 		Application.LoadLevel(2);
-		Time.timeScale = 1;	 		 			
+			 			
 	}
 
 	//Enregistrer la position de dark
@@ -283,3 +208,4 @@ function OnTriggerExit2D(other: Collider2D) {
 		animateur.SetBool("toucher", false);
 	}
 }
+

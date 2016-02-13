@@ -3,27 +3,15 @@
 public var roche2 : GameObject;
 public var roche3 : GameObject;
 public var diamant: GameObject;
-
 private var gamectrl:GameCtrl;
 
 function Awake (){
-
+// Initialisation de la variable Game Control
 	gamectrl = GameObject.FindGameObjectWithTag("GameCtrl").GetComponent(GameCtrl);
 }
 
-function Start () {
-
-}
-
-function Update () {
-		
-	
-}
-
 function OnCollisionEnter2D(other:  Collision2D){
-
-	if(other.gameObject.tag == "pique")
-	{				
+	if(other.gameObject.tag == "pique"){				
 		gamectrl.vieRoche--; 
 
 		if(gamectrl.vieRoche == 2){

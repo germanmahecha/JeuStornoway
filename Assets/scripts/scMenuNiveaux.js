@@ -12,46 +12,40 @@ public var diamantsN1:UnityEngine.UI.Image;
 public var rubisN1:UnityEngine.UI.Image;
 public var diamantsN2:UnityEngine.UI.Image;
 public var rubisN2:UnityEngine.UI.Image;
-
 private var son:AudioSource;
 
-
-
-function Start()
-{
-	//PlayerPrefs.DeleteAll(); // Pour effacer les PlayerPref pendant le developpement
+function Start(){
+	//Laisse voir le pourcentage des objets ramassés dans le menu Niveaux
 	diamantsN1.fillAmount=(PlayerPrefs.GetFloat('diamantsN1')/PlayerPrefs.GetFloat('maxDiamants'));
 	rubisN1.fillAmount=(PlayerPrefs.GetFloat('rubisN1')/PlayerPrefs.GetFloat('maxRubis'));
 	diamantsN2.fillAmount=(PlayerPrefs.GetFloat('diamantsN2')/PlayerPrefs.GetFloat('maxDiamants'));
 	rubisN2.fillAmount=(PlayerPrefs.GetFloat('rubisN2')/PlayerPrefs.GetFloat('maxDiamants'));
-
 	son=GetComponent.<AudioSource>();
 }
-
-
-function Awake()
-{
+function Awake(){
     DontDestroyOnLoad (transform.gameObject);
-
 }
 
-function niveau0() 
-{
+//Function pour activer l'escène Niveau Tutoriel
+function niveau0(){
 	son.Play();
 	Application.LoadLevel("niveauTuto");
 }
-function niveau1() 
-{
+
+//Function pour activer l'escène Niveau 1
+function niveau1(){
 	son.Play();
 	Application.LoadLevel("Niveau_1");
 }
-function niveau2() 
-{
+
+//Function pour activer l'escène Niveau 2
+function niveau2(){
 	son.Play();
 	Application.LoadLevel("Niveau_2");
 }
-function Menu() 
-{
+
+//Function pour activer l'escène Menu Accueil
+function Menu(){
 	son.Play();
 	Application.LoadLevel("Menu");
 }

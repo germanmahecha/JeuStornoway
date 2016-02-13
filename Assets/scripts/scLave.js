@@ -3,20 +3,13 @@
 private var gamectrl:GameCtrl;
 
 function Awake (){
-
+	// Initialisation de la variable Game Control
 	gamectrl = GameObject.FindGameObjectWithTag("GameCtrl").GetComponent(GameCtrl);
 }
 
-function Start () {
-
-}
-
-function Update () {
-
-}
-
+//Function Trigger qui detecte une collision avec le personnage
+//et lui enleve une vie.
 function OnCollisionEnter2D(other:  Collision2D){
-
 	if(other.gameObject.tag == "Dark"){
 		gamectrl.viesDark--;
 	}

@@ -12,32 +12,48 @@ public var rubis: UnityEngine.UI.Text;
 public var vies: UnityEngine.UI.Text;
 public var vieRoche:int=3;
 public var niveauActive:int=1;
-
+private var perdu:boolean=false;
+public var gagnant:boolean=false;
+public var panneauGagnant:GameObject;
+public var panneauPerdant:GameObject;
+public var panneauPause:GameObject;
 
 function Awake(){
 	niveauActive=Application.loadedLevel;
+	nbMaxDiamants = GameObject.FindGameObjectsWithTag("Diamant").length;
+	nbMaxRubis = GameObject.FindGameObjectsWithTag("Rubis").length;
 	PlayerPrefs.SetFloat('maxDiamants',nbMaxDiamants);
 	PlayerPrefs.SetFloat('maxRubis',nbMaxRubis);
 }
 function Start () {
 	dynamite=false;
 	dynamiteImage.fillAmount=0;
-
-	nbMaxDiamants = GameObject.FindGameObjectsWithTag("Diamant").length;
-	nbMaxRubis = GameObject.FindGameObjectsWithTag("Rubis").length;
+	panneauGagnant.SetActive(false);
+	panneauPerdant.SetActive(false);
+	panneauPause.SetActive(false);
 }
 
 function Update () {
-	
-	rubis.text= nbRubis.ToString() + "/"+nbMaxRubis;
-	diamants.text= nbDiamants.ToString() + "/" +nbMaxDiamants;
-	vies.text= viesDark .ToString();
+	//Variables texte pour l'interface (Canvas)
+	rubis.text= nbRubis.ToString() + " / "+nbMaxRubis;
+	diamants.text= nbDiamants.ToString() + " / " +nbMaxDiamants;
+	vies.text= viesDark.ToString();
+
+	//Validation pour activer le panneau perdant
+	if(viesDark==0&&!perdu){
+		PanneauPerdant();
+		perdu=true;
+	}
+	//Validation pour activer le panneau gagnant
+	if(gagnant){
+		PanneauGagnant();
+		gagnant=false;
+	}
 
 	//Verification si la dynamite a étét prise
 	verificationDynamite();
 	//Enregistre la quantite max de diamants et rubis pris par niveau
-	switch(niveauActive)
-	{
+	switch(niveauActive){
 		case 5: PlayerPrefs.SetFloat('diamantsN1',nbDiamants);
 				PlayerPrefs.SetFloat('rubisN1',nbRubis);
 				break;
@@ -46,11 +62,43 @@ function Update () {
 				break;
 		default: break;
 	}
-
-
 }
+
+//Function pour la detection et changement d'etat de l'image de la dynamite sur la interface.
 function verificationDynamite(){
 	if(dynamite==true)
-		dynamiteImage.fillAmount=1;
-		
+		dynamiteImage.fillAmount=1;	
+}
+
+//Function pour activer et désactiver le panneau pause
+function PanneauPause(){
+	if(Time.timeScale==1){
+		panneauPause.SetActive(true);
+		Time.timeScale=0;
+	}else if(Time.timeScale==0){
+		Time.timeScale=1;
+		panneauPause.SetActive(false);
+	}
+}
+
+//Function pour activer le panneau perdant et active le Menu Niveaux
+function PanneauPerdant(){
+	if(Time.timeScale==1){
+		panneauPerdant.SetActive(true);
+		Time.timeScale=0;
+	}else if(Time.timeScale==0){
+		Time.timeScale=1;
+		Application.LoadLevel('MenuNiveaux');
+	}
+}
+
+//Function pour activer le panneau gagnant et active le Menu Niveaux
+function PanneauGagnant(){
+	if(Time.timeScale==1){
+		panneauGagnant.SetActive(true);
+		Time.timeScale=0;
+	}else if(Time.timeScale==0){
+		Time.timeScale=1;
+		Application.LoadLevel('MenuNiveaux');
+	}
 }

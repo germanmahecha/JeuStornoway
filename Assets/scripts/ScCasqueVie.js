@@ -1,25 +1,17 @@
 ﻿#pragma strict
 
 // Variable qui contient le script du GameCtrl;
-
 private var gamectrl:GameCtrl;
-function Awake (){
 
+function Awake (){
+	// Initialisation de la variable Game Control
 	gamectrl = GameObject.FindGameObjectWithTag("GameCtrl").GetComponent(GameCtrl);
 }
 
-function Start () {
-
-}
-
-function Update () {
-
-}
-
-function OnTriggerEnter2D(other: Collider2D)
-{
-	if(other.gameObject.tag=='Dark')
-	{
+//Function Trigger qui detecte une collision avec le personnage
+//et lui ajoute une vie.
+function OnTriggerEnter2D(other: Collider2D){
+	if(other.gameObject.tag=='Dark'){
 		gamectrl.viesDark++;
 		Destroy(this.gameObject);
 	}

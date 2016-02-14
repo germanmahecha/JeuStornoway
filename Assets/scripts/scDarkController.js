@@ -1,24 +1,26 @@
 ﻿#pragma strict
 
+//Variables du perso
+
 private var rigidBody2D:Rigidbody2D;
 private var saut:boolean=false;
-public var vitessePerso:float= 5.0;
-public var forceSaut:float=500;
-public var verifierSol:Transform;
-public var sol:LayerMask;
-public var dansLeSol:boolean=false;
-private var marcheDroit:boolean=true;
-public var animateur:Animator;
-var course:float=2;
-public var force:int=10;
-private var doubleSaute:boolean=false;
-public var diamant_son:AudioSource;
-public var ouch:AudioSource;
-public var rubis_son:AudioSource;
-public var sonViesDark:AudioSource;
-public var sonSautDark:AudioSource;
+public var vitessePerso:float= 5.0; // vitesse du perso
+public var forceSaut:float=500; // force saut
+public var verifierSol:Transform; //détécter le sol
+public var sol:LayerMask; // assigner un layer au sol
+public var dansLeSol:boolean=false; // vérifier si le perso et au sol.
+private var marcheDroit:boolean=true; // Détecter si le perso marche à droit
+public var animateur:Animator; // animateur du perso
+var course:float=2;	// vitesse de la course
+public var force:int=10; //force du perso
+private var doubleSaute:boolean=false; // Permettre double saut
+public var diamant_son:AudioSource; // son du diamant
+public var ouch:AudioSource; // son toucher
+public var rubis_son:AudioSource; // son rubis
+public var sonViesDark:AudioSource; // son vie dark
+public var sonSautDark:AudioSource; // son saute du perso
 
-private var gamectrl:GameCtrl;
+private var gamectrl:GameCtrl; // variable gameControl
 
 function Awake (){
 	gamectrl = GameObject.FindGameObjectWithTag("GameCtrl").GetComponent(GameCtrl);
@@ -31,7 +33,10 @@ function Start () {
 }
 
 function FixedUpdate (){
-	dansLeSol = Physics2D.OverlapCircle(verifierSol.position, 0.1, sol);
+
+	//Détecter si le perso est au sol
+
+	dansLeSol = Physics2D.OverlapCircle(verifierSol.position, 0.1, sol); 
 	if(dansLeSol){
 		doubleSaute=false;
 		animateur.SetBool("dansLeSol",true);
@@ -39,25 +44,35 @@ function FixedUpdate (){
 		animateur.SetBool("dansLeSol",false);
 	}
 
-	var horizontal:float= Input.GetAxis("Horizontal");
-	var courrir=1;
+	//Assigner la direction de déplacément du perso
 
-	if(Input.GetKey("z")){
-		courrir=course;	
-		animateur.SetBool("course", true);
+	var horizontal:float= Input.GetAxis("Horizontal");
+
+	var courrir=1; // assigner la vittese de la course
+
+	//Le perso court lorsque la touche z est enfoncée
+
+	if(Input.GetKey("z") && horizontal){
+		courrir=course*vitessePerso;	
+		animateur.SetBool("course", true); //Déclancher l'animation de course
 	}else{
-		animateur.SetBool("course", false);
+		animateur.SetBool("course", false); // Désactiver la animation de course
 	}
 
-	if(Input.GetKey("x")){			
-		animateur.SetBool("casser", true);
+	//Le perso pique lorsque la touche x est enfoncée
+
+	if(Input.GetKey("x") && !horizontal){
+				
+		animateur.SetBool("casser", true); //Déclancher l'animation de piquer
 	}else{
-		animateur.SetBool("casser", false);
+		animateur.SetBool("casser", false); // Désactiver la animation de piquer
 	}
 
 	rigidBody2D.velocity.x= horizontal * vitessePerso*courrir;
 
 	animateur.SetFloat("vitessePerso", Mathf.Abs(horizontal));
+
+	//Direction de marche du perso
 
 	if(marcheDroit && horizontal < 0 ){
 		Tourner();
@@ -66,11 +81,15 @@ function FixedUpdate (){
 		Tourner();
 	}
 
+	//Vérifier si le perso est au sol
+
 	if(Physics2D.OverlapCircle(verifierSol.position, 0.1, sol)){
 		dansLeSol=true;
 	}else if(Physics2D.OverlapCircle(verifierSol.position, 0.1, sol)){		
 		dansLeSol=false;
 	}
+
+	//Déclancher l'animation pour le double saut
 
 	animateur.SetBool("saut", !dansLeSol);
 
@@ -87,6 +106,7 @@ function FixedUpdate (){
 
 function Update ()
 {
+	//Sauter lorsque la touche space est énfoncée
 
 	if((dansLeSol || !doubleSaute) && Input.GetKeyDown(KeyCode.Space))
 	{
@@ -106,11 +126,14 @@ function Update ()
     }
 }
 
+//Faire tourner le perso à gauche
+
 function Tourner (){
 	marcheDroit = !marcheDroit;
 	transform.localScale.x *= -1;
 }
 
+//Détecter les trigger entre le perso et les objects de l scene de jeu
 
 function OnTriggerEnter2D(other: Collider2D)
 {

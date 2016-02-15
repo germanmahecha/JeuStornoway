@@ -1,4 +1,4 @@
-﻿#pragma strict
+﻿ #pragma strict
 
 public var nbDiamants:int= 0;
 public var nbRubis:int= 0;
@@ -19,7 +19,6 @@ public var panneauPerdant:GameObject;
 public var panneauPause:GameObject;
 
 function Awake(){
-	niveauActive=Application.loadedLevel;
 	nbMaxDiamants = GameObject.FindGameObjectsWithTag("Diamant").length;
 	nbMaxRubis = GameObject.FindGameObjectsWithTag("Rubis").length;
 	PlayerPrefs.SetFloat('maxDiamants',nbMaxDiamants);
@@ -27,13 +26,17 @@ function Awake(){
 }
 function Start () {
 	dynamite=false;
+	perdu=false;
 	dynamiteImage.fillAmount=0;
 	panneauGagnant.SetActive(false);
 	panneauPerdant.SetActive(false);
 	panneauPause.SetActive(false);
+
 }
 
 function Update () {
+	niveauActive=Application.loadedLevel;
+
 	//Variables texte pour l'interface (Canvas)
 	rubis.text= nbRubis.ToString() + " / "+nbMaxRubis;
 	diamants.text= nbDiamants.ToString() + " / " +nbMaxDiamants;
@@ -62,6 +65,8 @@ function Update () {
 				break;
 		default: break;
 	}
+
+
 }
 
 //Function pour la detection et changement d'etat de l'image de la dynamite sur la interface.
@@ -88,7 +93,7 @@ function PanneauPerdant(){
 		Time.timeScale=0;
 	}else if(Time.timeScale==0){
 		Time.timeScale=1;
-		Application.LoadLevel('MenuNiveaux');
+		Application.LoadLevel(2);
 	}
 }
 

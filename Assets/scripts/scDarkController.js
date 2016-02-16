@@ -19,6 +19,7 @@ public var ouch:AudioSource; // son toucher
 public var rubis_son:AudioSource; // son rubis
 public var sonViesDark:AudioSource; // son vie dark
 public var sonSautDark:AudioSource; // son saute du perso
+public var pique:GameObject;
 
 private var gamectrl:GameCtrl; // variable gameControl
 
@@ -30,6 +31,7 @@ function Awake (){
 function Start () {
 	rigidBody2D=GetComponent.<Rigidbody2D>();
 	animateur=GetComponent.<Animator>();
+	pique.active = false;
 }
 
 function FixedUpdate (){
@@ -62,10 +64,11 @@ function FixedUpdate (){
 	//Le perso pique lorsque la touche x est enfoncée
 
 	if(Input.GetKey("x") && !horizontal){
-				
+		pique.active = true;		
 		animateur.SetBool("casser", true); //Déclancher l'animation de piquer
 	}else{
 		animateur.SetBool("casser", false); // Désactiver la animation de piquer
+		pique.active = false;
 	}
 
 	rigidBody2D.velocity.x= horizontal * vitessePerso*courrir;
@@ -143,8 +146,13 @@ function OnTriggerEnter2D(other: Collider2D)
 		transform.position.x-= 1;
 	}
 
-	if(other.gameObject.tag=='Roche'){		
+	if(other.gameObject.tag=='Roche'){	
+		ouch.Play();	
 		animateur.SetBool("toucher", true);
+		yield WaitForSeconds(0.09);
+		Destroy(other.gameObject);
+		yield WaitForSeconds(0.05);
+		animateur.SetBool("toucher", false);
 	}
 
 	if(other.gameObject.tag=='returnPosition'){		
@@ -155,6 +163,10 @@ function OnTriggerEnter2D(other: Collider2D)
 		//son quand la stalactite touch le perso
 		ouch.Play();	
 		animateur.SetBool("toucher", true);
+		yield WaitForSeconds(0.09);
+		Destroy(other.gameObject);
+		yield WaitForSeconds(0.05);
+		animateur.SetBool("toucher", false);
 	}
 
 	//son diamant

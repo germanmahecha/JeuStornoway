@@ -15,18 +15,24 @@ function Awake(){
 	DontDestroyOnLoad (transform.gameObject);
 }
 
-//Function pour active l'escène Menu Niveaux
+//Function pour active la scène de Menu Niveaux
 function StartJouer(){
     son.Play();
     Application.LoadLevel("MenuNiveaux");
 }
-//Function pour active l'escène Menu Options
+//Function pour active  la scène de  Options
 function StartOptions(){
     son.Play();
     Application.LoadLevel("MenuOptions");
 }
-//Function pour active l'escène Menu Instructions
+//Function pour active  la scène de  Menu Instructions
 function StartInstruction(){
     son.Play();
     Application.LoadLevel("MenuInstructions");
+}
+
+//Function pour active la scène de Crédit
+function StartCredit(){
+    son.Play();
+    Application.LoadLevel("Credit");
 }
